@@ -7,20 +7,23 @@ LABEL version="1.0.0"
 RUN export DEBIAN_FRONTEND=noninteractive \
     && apt-get --quiet=2 update  > /dev/null 2>&1 \
     && apt-get --quiet=2 --assume-yes --no-install-recommends install  \
-    apache2\
-    curl\
+    apache2 \
+    apt-transport-https \
+    curl \
     libapache2-mod-php5 \
+    openssl \
     php5-cli \
     php5-common \
     php5-curl \
     php5-gd \
     php5-gmp \
+    php5-intl \
     php5-json \
     php5-ldap \
     php5-mysql \
     php5-readline \
     php5-xsl \
-    unzip\
+    unzip \
     zip
 
 ##### Add the thanos user

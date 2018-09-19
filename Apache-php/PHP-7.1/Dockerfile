@@ -14,8 +14,10 @@ RUN echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu xenial main" > /etc/apt
 RUN export DEBIAN_FRONTEND=noninteractive \
     && apt-get --quiet=2 --assume-yes --no-install-recommends install  \
     apache2 \
+    apt-transport-https \
     curl \
     libapache2-mod-php7.1 \
+    openssl \
     php7.1-bz2 \
     php7.1-curl \
     php7.1-gd \
@@ -26,7 +28,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
     php7.1-xml \
     php7.1-xsl \
     php7.1-zip \
-    unzip\
+    unzip \
     zip
 
 ##### Add the thanos user

@@ -7,20 +7,22 @@ LABEL version="1.0.1"
 RUN export DEBIAN_FRONTEND=noninteractive \
     && apt-get --quiet=2 update  > /dev/null 2>&1 \
     && apt-get --quiet=2 --assume-yes --no-install-recommends install  \
-    apache2\
-    curl\
-    libapache2-mod-php7.2\
-    php7.2-bz2\
-    php7.2-curl\
-    php7.2-gd\
-    php7.2-intl\
-    php7.2-json\
-    php7.2-mbstring\
-    php7.2-mysql\
-    php7.2-xml\
-    php7.2-xsl\
-    php7.2-zip\
-    unzip\
+    apache2 \
+    apt-transport-https \
+    curl \
+    libapache2-mod-php7.2 \
+    openssl \
+    php7.2-bz2 \
+    php7.2-curl \
+    php7.2-gd \
+    php7.2-intl \
+    php7.2-json \
+    php7.2-mbstring \
+    php7.2-mysql \
+    php7.2-xml \
+    php7.2-xsl \
+    php7.2-zip \
+    unzip \
     zip
 
 ##### Add the thanos user
